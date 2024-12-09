@@ -42,10 +42,8 @@
         private ObservableCollection<KanbanModel> GetTaskDetails()
         {
             var taskDetails = new ObservableCollection<KanbanModel>();
+
             string path = @"ms-appx:///";
-#if Main_SB
-            path = @"ms-appx:///kanban/";
-#endif
             KanbanModel taskDetail = new KanbanModel();
             taskDetail.Title = "UWP Issue";
             taskDetail.Id = "6593";

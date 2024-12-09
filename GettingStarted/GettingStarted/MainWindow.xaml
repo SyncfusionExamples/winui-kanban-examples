@@ -43,7 +43,7 @@
             </kanban:KanbanColumn>
 
             <kanban:KanbanColumn HeaderText="Done"
-                                 Categories="Closed,Closed NoChanges,Won't Fix"
+                                 Categories="Closed,Closed No Changes,Won't Fix"
                                  MinimumCount="2"
                                  MaximumCount="10">
                 <kanban:KanbanColumn.ErrorBarSettings>
