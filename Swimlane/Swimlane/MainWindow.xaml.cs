@@ -13,7 +13,7 @@ namespace Swimlane
         public MainWindow()
         {
             this.InitializeComponent();
-            this.Title = "Syncfusion Kanban Controls Gallery for WinUI Desktop";
+            this.Title = "Kanban Control";
         }
     }
 }

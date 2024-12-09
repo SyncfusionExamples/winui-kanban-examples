@@ -64,9 +64,6 @@
             var taskDetails = new ObservableCollection<KanbanModel>();
 
             string path = @"ms-appx:///";
-#if Main_SB
-            path = @"ms-appx:///kanban/";
-#endif
             KanbanModel taskDetail = new KanbanModel();
             taskDetail.Title = "Application performance";
             taskDetail.Id = "1001";
