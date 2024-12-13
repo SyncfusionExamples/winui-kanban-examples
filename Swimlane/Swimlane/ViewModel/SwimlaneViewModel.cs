@@ -1,11 +1,11 @@
 ﻿namespace Swimlane
 {
     using System;
-    using Microsoft.UI.Xaml.Media.Imaging;
-    using Syncfusion.UI.Xaml.Kanban;
-    using System.Collections.ObjectModel;
-    using Microsoft.UI.Xaml.Controls;
     using System.ComponentModel;
+    using Syncfusion.UI.Xaml.Kanban;
+    using Microsoft.UI.Xaml.Controls;
+    using System.Collections.ObjectModel;
+    using Microsoft.UI.Xaml.Media.Imaging;
    
     /// <summary>
     /// Represents a ViewModel that manages the task details for a swimlane in a Kanban board. 
@@ -62,7 +62,6 @@
         private ObservableCollection<KanbanModel> GetTaskDetails()
         {
             var taskDetails = new ObservableCollection<KanbanModel>();
-
             string path = @"ms-appx:///";
             KanbanModel taskDetail = new KanbanModel();
             taskDetail.Title = "Application performance";
