@@ -1,10 +1,10 @@
 ﻿namespace GettingStarted
 {
-    using Microsoft.UI.Xaml.Media.Imaging;
-    using Microsoft.UI.Xaml.Controls;
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using Microsoft.UI.Xaml.Media.Imaging;
+    using Microsoft.UI.Xaml.Controls;
     using Syncfusion.UI.Xaml.Kanban;
 
     /// <summary>

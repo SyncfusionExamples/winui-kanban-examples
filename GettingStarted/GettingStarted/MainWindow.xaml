@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Window
-    x:Class="GettingStarted.MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:GettingStarted"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:kanban="using:Syncfusion.UI.Xaml.Kanban"
-    mc:Ignorable="d"
-    Title="GettingStarted">
+<Window x:Class="GettingStarted.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:kanban="using:Syncfusion.UI.Xaml.Kanban"
+        xmlns:local="using:GettingStarted"
+        mc:Ignorable="d"
+        Title="GettingStarted">
 
     <Grid>
         <Grid.DataContext>
@@ -17,6 +16,16 @@
         <kanban:SfKanban x:Name="kanban"
                          AutoGenerateColumns="False"
                          ItemsSource="{Binding TaskDetails}">
+            <kanban:SfKanban.Header>
+                <Grid Height="50"
+                      Margin="4">
+                    <TextBlock Text="Kanban Board"
+                               FontSize="14"
+                               FontWeight="SemiBold"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Grid>
+            </kanban:SfKanban.Header>
             <kanban:SfKanban.IndicatorColorPalette>
                 <kanban:KanbanColorMapping Key="Low" Color="#0F7B0F"/>
                 <kanban:KanbanColorMapping Key="Normal" Color="#FFB900"/>
@@ -24,6 +33,7 @@
             </kanban:SfKanban.IndicatorColorPalette>
             <kanban:KanbanColumn HeaderText="To Do" 
                                  Categories="Open,Postponed" />
+            
             <kanban:KanbanColumn HeaderText="In Progress"
                                  Categories="In Progress"
                                  MinimumCount="2">

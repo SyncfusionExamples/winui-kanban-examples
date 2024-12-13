@@ -13,7 +13,7 @@ namespace GettingStarted
         public MainWindow()
         {
             this.InitializeComponent();
-            this.Title = "Kanban Control";
+            this.Title = "Kanban Board Demo";
         }
     }
 }

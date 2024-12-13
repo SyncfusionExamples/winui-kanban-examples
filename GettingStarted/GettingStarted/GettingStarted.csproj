@@ -12,28 +12,6 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-	
-  <ItemGroup>
-    <None Remove="Assets\Kanban\People_Circle1.png" />
-    <None Remove="Assets\Kanban\People_Circle10.png" />
-    <None Remove="Assets\Kanban\People_Circle11.png" />
-    <None Remove="Assets\Kanban\People_Circle12.png" />
-    <None Remove="Assets\Kanban\People_Circle13.png" />
-    <None Remove="Assets\Kanban\People_Circle14.png" />
-    <None Remove="Assets\Kanban\People_Circle17.png" />
-    <None Remove="Assets\Kanban\People_Circle2.png" />
-    <None Remove="Assets\Kanban\People_Circle23.png" />
-    <None Remove="Assets\Kanban\People_Circle3.png" />
-    <None Remove="Assets\Kanban\People_Circle31.png" />
-    <None Remove="Assets\Kanban\People_Circle35.png" />
-    <None Remove="Assets\Kanban\People_Circle4.png" />
-    <None Remove="Assets\Kanban\People_Circle5.png" />
-    <None Remove="Assets\Kanban\People_Circle6.png" />
-    <None Remove="Assets\Kanban\People_Circle7.png" />
-    <None Remove="Assets\Kanban\People_Circle8.png" />
-    <None Remove="Assets\Kanban\People_Circle9.png" />
-    <None Remove="Assets\Kanban\People_Circle_0.png" />
-  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
