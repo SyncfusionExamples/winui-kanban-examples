@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Swimlane (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Swimlane (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
