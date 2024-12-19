@@ -9,14 +9,14 @@
 
   <Identity
     Name="969a2a18-3381-49e6-996c-ec47eac6b110"
-    Publisher="CN=GokulGanesan"
+    Publisher="CN=Syncfusion"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="969a2a18-3381-49e6-996c-ec47eac6b110" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>GettingStarted</DisplayName>
-    <PublisherDisplayName>GokulGanesan</PublisherDisplayName>
+    <PublisherDisplayName>Syncfusion</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
