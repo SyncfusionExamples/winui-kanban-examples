@@ -1,6 +1,6 @@
-# winui-kanban-examples
+# winui-kanban
 
-This repository contains different samples demonstrating about [WinUI Kanban](https://help.syncfusion.com/winui/kanban/getting-started) control.
+This repository contains different samples demonstrating about [WinUI Kanban (SfKanban)](https://help.syncfusion.com/winui/kanban/getting-started) control.
 
 ## Syncfusion controls
 
@@ -27,10 +27,10 @@ This project used the following Syncfusion control(s):
 
 		public App()
 		{
-			//Register Syncfusion license
-			Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+		    // Register Syncfusion license
+                    Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 		
-			InitializeComponent();
+                    InitializeComponent();
 		}
     Refer to this [link](https://help.syncfusion.com/winui/licensing/overview) for more details.
 
