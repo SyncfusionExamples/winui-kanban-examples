@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CustomFieldSorting (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CustomFieldSorting (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
