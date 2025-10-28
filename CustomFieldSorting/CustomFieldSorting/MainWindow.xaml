@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Window
-    x:Class="CustomFieldSorting.MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:CustomFieldSorting"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:kanban="using:Syncfusion.UI.Xaml.Kanban"
-    mc:Ignorable="d"
-    Title="CustomFieldSorting">
+<Window x:Class="CustomFieldSorting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:CustomFieldSorting"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:kanban="using:Syncfusion.UI.Xaml.Kanban"
+        mc:Ignorable="d"
+        Title="CustomFieldSorting">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -19,6 +18,12 @@
         <Grid.DataContext>
             <local:KanbanViewModel/>
         </Grid.DataContext>
+
+        <Grid.Resources>
+            <SolidColorBrush x:Key="SyncfusionKanbanCardItemBackground" Color="Transparent" />
+            <SolidColorBrush x:Key="SyncfusionKanbanCardItemBorderBrush" Color="Transparent" />
+            <Thickness x:Key="SyncfusionKanbanColumnsMargin">0</Thickness>
+        </Grid.Resources>
 
         <!-- Top controls -->
         <StackPanel Grid.Row="0"
@@ -33,8 +38,7 @@
                       SelectedIndex="0"
                       Width="200"
                       HorizontalAlignment="Left"
-                      VerticalAlignment="Center"
-                      SelectionChanged="OnSortOrderSelectionChanged">
+                      VerticalAlignment="Center">
             </ComboBox>
 
             <TextBlock Text="Sorting mapping path:"
@@ -45,8 +49,7 @@
                       SelectedIndex="0"
                       Width="200"
                       HorizontalAlignment="Left"
-                      VerticalAlignment="Center"
-                      SelectionChanged="OnMappingPathSelectionChanged">
+                      VerticalAlignment="Center">
             </ComboBox>
         </StackPanel>
 

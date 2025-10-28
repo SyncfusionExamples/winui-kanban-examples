@@ -14,33 +14,26 @@ namespace CustomFieldSorting
         #region Fields
 
         /// <summary>
-        /// The kanban selected card. 
-        /// </summary>
-        private KanbanCardItem selectedCard;
-
-        /// <summary>
         /// The Kanban column where the card is dropped.
         /// </summary>
-
-        private KanbanColumn targetColumn;
-
-        /// <summary>
-        /// To store initial Kanban SortingMappingPath value
-        /// </summary>
-        private string? sortingMappingPathValue;
+        private KanbanColumn? targetColumn;
 
         #endregion
 
         #region Constructor
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
             this.sortOrderCombobox.ItemsSource = new ObservableCollection<string>() { "Ascending", "Descending" };
             this.sortOrderCombobox.SelectedIndex = 0;
+            this.sortOrderCombobox.SelectionChanged += OnSortOrderSelectionChanged;
             this.mappingPathCombobox.ItemsSource = new ObservableCollection<string>() { "Title", "Priority" };
             this.mappingPathCombobox.SelectedIndex = 0;
-            this.kanban.CardDragStarting += this.OnKanbanCardDragStarting;
+            this.mappingPathCombobox.SelectionChanged += OnMappingPathSelectionChanged;
             this.kanban.CardDrop += OnKanbanCardDrop;
         }
 
@@ -76,17 +69,6 @@ namespace CustomFieldSorting
             }
 
             this.kanban.SortingMappingPath = selectedItem;
-            this.sortingMappingPathValue = selectedItem;
-        }
-
-        /// <summary>
-        /// Occurs when a card drag event is started.
-        /// </summary>
-        /// <param name="sender">The object.</param>
-        /// <param name="e">The event args.</param>
-        private void OnKanbanCardDragStarting(object sender, KanbanCardDragStartingEventArgs e)
-        {
-            this.selectedCard = e.Card;
         }
 
         /// <summary>
