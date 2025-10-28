@@ -7,7 +7,6 @@ namespace IndexBasedSorting
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Reflection;
 
@@ -115,7 +114,7 @@ namespace IndexBasedSorting
             // Retrieve sorting configuration
             var sortMappingPath = this.kanban.SortingMappingPath;
             var sortingOrder = this.kanban.SortingOrder;
-            CardDetails cardDetails = this.selectedCard.Content as CardDetails;
+            CardDetails? cardDetails = this.selectedCard.Content as CardDetails;
 
             // Proceed only if sorting path is defined
             if (cardDetails == null || string.IsNullOrEmpty(sortMappingPath))
@@ -203,7 +202,7 @@ namespace IndexBasedSorting
                     continue;
                 }
 
-                PropertyInfo propertyInfo = this.GetPropertyInfo(item.GetType(), "Index");
+                PropertyInfo? propertyInfo = this.GetPropertyInfo(item.GetType(), "Index");
                 if (propertyInfo == null)
                 {
                     continue;
@@ -258,7 +257,7 @@ namespace IndexBasedSorting
                     continue;
                 }
 
-                PropertyInfo propertyInfo = this.GetPropertyInfo(item.GetType(), "Index");
+                PropertyInfo? propertyInfo = this.GetPropertyInfo(item.GetType(), "Index");
                 if (propertyInfo == null)
                 {
                     continue;
@@ -292,14 +291,14 @@ namespace IndexBasedSorting
         /// </summary>
         /// <param name="cardDetails">The card object.</param>
         /// <returns>The index value or null if not found.</returns>
-        private int? GetCardIndex(object cardDetails)
+        private int? GetCardIndex(object? cardDetails)
         {
             if (cardDetails == null)
             {
                 return null;
             }
 
-            PropertyInfo propertyInfo = this.GetPropertyInfo(cardDetails.GetType(), "Index");
+            PropertyInfo? propertyInfo = this.GetPropertyInfo(cardDetails.GetType(), "Index");
             if (propertyInfo == null)
             {
                 return null;
@@ -320,7 +319,7 @@ namespace IndexBasedSorting
         /// <param name="type">The property type.</param>
         /// <param name="key">The property name.</param>
         /// <returns>The property info of the specified property.</returns>
-        private PropertyInfo GetPropertyInfo(Type type, string key)
+        private PropertyInfo? GetPropertyInfo(Type type, string key)
         {
             return this.GetPropertyInfoCustomType(type, key);
         }
@@ -331,18 +330,28 @@ namespace IndexBasedSorting
         /// <param name="type">The property type.</param>
         /// <param name="key">The property name.</param>
         /// <returns>The property info of the specified property.</returns>
-        private PropertyInfo GetPropertyInfoCustomType(Type type, string key)
+        private PropertyInfo? GetPropertyInfoCustomType(Type type, string key)
         {
             return type.GetProperty(key);
         }
+
         #endregion
     }
 
+
     /// <summary>
-    /// The converter class to display index value in string format.
+    /// A value converter that formats an index value into a rank string representation.
     /// </summary>
     public sealed class RankFormatConverter : IValueConverter
     {
+        /// <summary>
+        /// Converts an index value to a formatted rank string (e.g., "Rank #1").
+        /// </summary>
+        /// <param name="value">The value to convert, typically an index or rank number.</param>
+        /// <param name="targetType">The target type of the binding (not used).</param>
+        /// <param name="parameter">An optional parameter for conversion (not used).</param>
+        /// <param name="language">The language of the conversion (not used).</param>
+        /// <returns>A formatted string representing the rank, or an empty string if the value is null.</returns>
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             if (value == null)
@@ -353,9 +362,16 @@ namespace IndexBasedSorting
             return $"Rank #{value}";
         }
 
+        /// <summary>
+        /// Not implemented. Conversion back from string to value is not supported for one-way binding.
+        /// </summary>
+        /// <param name="value">The value to convert back (not used).</param>
+        /// <param name="targetType">The target type of the binding (not used).</param>
+        /// <param name="parameter">An optional parameter for conversion (not used).</param>
+        /// <param name="language">The language of the conversion (not used).</param>
+        /// <returns>Returns <see cref="Microsoft.UI.Xaml.DependencyProperty.UnsetValue"/> to indicate that conversion is not supported.</returns>
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
-            // Not needed for one-way display
             return Microsoft.UI.Xaml.DependencyProperty.UnsetValue;
         }
     }
