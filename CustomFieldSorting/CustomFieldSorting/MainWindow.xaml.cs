@@ -60,6 +60,11 @@ namespace CustomFieldSorting
             }
         }
 
+        /// <summary>
+        /// Occurs when the mapping path value is changed.
+        /// </summary>
+        /// <param name="sender">The object.</param>
+        /// <param name="e">The event args.</param>
         private void OnMappingPathSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedItem = (sender as ComboBox)?.SelectedItem?.ToString();
