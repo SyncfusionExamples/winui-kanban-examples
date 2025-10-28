@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "IndexBasedSorting (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "IndexBasedSorting (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

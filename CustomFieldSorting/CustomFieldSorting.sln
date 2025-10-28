@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFieldSorting", "CustomFieldSorting\CustomFieldSorting.csproj", "{28C256B0-DCBB-4210-B26E-2E54BE65E498}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Debug|ARM64.Build.0 = Debug|ARM64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Debug|x64.ActiveCfg = Debug|x64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Debug|x64.Build.0 = Debug|x64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Debug|x64.Deploy.0 = Debug|x64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Debug|x86.ActiveCfg = Debug|x86
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Debug|x86.Build.0 = Debug|x86
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Debug|x86.Deploy.0 = Debug|x86
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Release|ARM64.ActiveCfg = Release|ARM64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Release|ARM64.Build.0 = Release|ARM64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Release|ARM64.Deploy.0 = Release|ARM64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Release|x64.ActiveCfg = Release|x64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Release|x64.Build.0 = Release|x64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Release|x64.Deploy.0 = Release|x64
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Release|x86.ActiveCfg = Release|x86
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Release|x86.Build.0 = Release|x86
+		{28C256B0-DCBB-4210-B26E-2E54BE65E498}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71232359-D28F-4065-9774-0E4798DBC9D8}
+	EndGlobalSection
+EndGlobal
