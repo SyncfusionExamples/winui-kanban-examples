@@ -26,24 +26,23 @@ namespace IndexBasedSorting
         /// <summary>
         /// The Kanban column where the card is dropped.
         /// </summary>
-        private KanbanColumn targetColumn;
-
-        /// <summary>
-        /// To store initial Kanban SortingMappingPath value
-        /// </summary>
-        private string sortingMappingPathValue;
+        private KanbanColumn? targetColumn;
 
         #endregion
 
         #region Constructor
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
             this.selectedCard = new KanbanCardItem();
-            this.SortOrderComboBox.ItemsSource = new ObservableCollection<string>() { "Ascending", "Descending" };
-            this.SortOrderComboBox.SelectedIndex = 0;
-            this.kanban.CardDragStarting += this.OnKanbanCardDragStarting;
+            this.sortOrderComboBox.ItemsSource = new ObservableCollection<string>() { "Ascending", "Descending" };
+            this.sortOrderComboBox.SelectedIndex = 0;
+            this.sortOrderComboBox.SelectionChanged += OnSortOrderComboBoxSelectionChanged;
+            this.kanban.CardDragStarting += OnKanbanCardDragStarting;
             this.kanban.CardDrop += OnKanbanCardDrop;
         }
 
@@ -75,7 +74,7 @@ namespace IndexBasedSorting
         /// </summary>
         /// <param name="sender">The object.</param>
         /// <param name="e">The event args.</param>
-        private void OnKanbanCardDragStarting(object sender, KanbanCardDragStartingEventArgs e)
+        private void OnKanbanCardDragStarting(object? sender, KanbanCardDragStartingEventArgs e)
         {
             this.selectedCard = e.Card;
         }

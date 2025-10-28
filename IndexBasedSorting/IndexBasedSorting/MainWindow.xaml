@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Window
-    x:Class="IndexBasedSorting.MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:IndexBasedSorting"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:kanban="using:Syncfusion.UI.Xaml.Kanban"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Title="IndexBasedSorting">
+<Window x:Class="IndexBasedSorting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:IndexBasedSorting"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:kanban="using:Syncfusion.UI.Xaml.Kanban"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="IndexBasedSorting">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -22,6 +21,9 @@
 
         <Grid.Resources>
             <local:RankFormatConverter x:Key="RankFormatConverter"/>
+            <SolidColorBrush x:Key="SyncfusionKanbanCardItemBackground" Color="Transparent" />
+            <SolidColorBrush x:Key="SyncfusionKanbanCardItemBorderBrush" Color="Transparent" />
+            <Thickness x:Key="SyncfusionKanbanColumnsMargin">0</Thickness>
         </Grid.Resources>
 
         <!-- Top bar: Sort direction -->
@@ -33,11 +35,10 @@
             <TextBlock Text="Sort direction"
                        FontWeight="SemiBold"
                        VerticalAlignment="Center"/>
-            <ComboBox x:Name="SortOrderComboBox"
+            <ComboBox x:Name="sortOrderComboBox"
                       Width="200"
                       HorizontalAlignment="Left"
-                      VerticalAlignment="Center"
-                      SelectionChanged="OnSortOrderComboBoxSelectionChanged">
+                      VerticalAlignment="Center">
             </ComboBox>
         </StackPanel>
 
